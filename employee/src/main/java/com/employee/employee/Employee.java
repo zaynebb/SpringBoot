@@ -20,9 +20,7 @@ public class Employee implements 	Serializable  {
 	@Column(length=70)
 	private String Gender; 
 	private Integer IdentityNumber;
-	@ManyToOne
-	@JoinColumn(name="id_Language")
-	private Employee_Language emplanguage;
+	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -67,20 +65,5 @@ public class Employee implements 	Serializable  {
 	public void setIdentityNumber(Integer identityNumber) {
 		IdentityNumber = identityNumber;
 	}
-	public Employee_Language getEmplanguage() {
-		return emplanguage;
-	}
-	public void setEmplanguage(Employee_Language emplanguage) {
-		this.emplanguage = emplanguage;
-	}
-	public Employee(String name, String lastName, String gender,
-			Integer identityNumber, Employee_Language emplanguage) {
-		super();
-		Name = name;
-		LastName = lastName;
-		Gender = gender;
-		IdentityNumber = identityNumber;
-		this.emplanguage = emplanguage;
-	} 
 
 }

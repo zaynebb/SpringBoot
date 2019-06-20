@@ -23,8 +23,16 @@ public class EmployeeApplication {
 	employeedao.save(new Employee("Zayneb","Bousselmi","female", 99));
 	employeedao.save(new Employee("Basma","Bousselmi","female",  99));
 	employeedao.save(new Employee("Abderrazak","Bousselmi","male",  99));
+	employeedao.save(new Employee("Mohamed","haj","male",  99));
 	List<Employee> emp1 = employeedao.employeeParLastname("Bousselmi");
 for(Employee e:emp1)
+{System.out.println(e.getLastName());
+System.out.println(e.getName());
+System.out.println(e.getGender());
+
+}
+List<Employee> emp2 = employeedao.employeeParLastname("haj");
+for(Employee e:emp2)
 {System.out.println(e.getLastName());
 System.out.println(e.getName());
 System.out.println(e.getGender());
